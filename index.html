@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Guessing Game</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="instructions">
+            <h1>Try to land on the number shown below without going over!</h1>
+            <h2>Each of the crystals below has a secret value. Click on the images to increase your score and try to
+                land on the goal!</h2>
+        </div>
+        <div class="row">
+            <h3>Your goal is: <span id="current-goal-display"></span></h2>
+        </div>
+        <div class="row">
+            <h3>Your current score is: <span id="current-score-display"></span></h2>
+        </div>
+        <div class="row" id="counters">
+            <span id="wins-count"></span>
+            <span id="losses-count"></span>
+        </div>
+    </div>
+    <div class="container" id="crystal-container">
+        <img src="assets/images/crystal1.png" class="crystal-image" id="crystal1">
+        <img src="assets/images/crystal2.png" class="crystal-image" id="crystal2">
+        <img src="assets/images/crystal3.png" class="crystal-image" id="crystal3">
+        <img src="assets/images/crystal4.png" class="crystal-image" id="crystal4">
+
+    </div>
+    <footer>
+        <a href="https://pngtree.com/free-vectors">free vectors from pngtree.com</a>
+    </footer>
+
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</html>

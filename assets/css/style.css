@@ -1,0 +1,9 @@
+.crystal-image {
+    height: 150px;
+    width: 150px;
+}
+
+.spinning-image {
+    -webkit-transform: rotate(1080deg);
+    -webkit-transition-duration: 3s;
+}
