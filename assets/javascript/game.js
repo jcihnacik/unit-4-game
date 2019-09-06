@@ -33,42 +33,45 @@ function startGame() {
     console.log("The first crystal's value is " + firstCrystalValue);
 
 }
+function gameWinner() {
+    alert("You win!");
+    winsCount++;
+    $("#wins-count").text(winsCount);
+    currentScore = 0;
+    $("#current-score-display").text(currentScore);
+    startGame();
+}
+
+function gameLoser() {
+    alert("You lose!!");
+    lossesCount++;
+    $("losses-count").text(lossesCount);
+    currentScore = 0;
+    $("#current-score-display").text(currentScore);
+    startGame();
+}
 
 $(".crystal-image").on("click", function () {
 
-    // Determining the crystal's value requires us to extract the value from the data attribute.
-    // Using the $(this) keyword specifies that we should be extracting the crystal value of the clicked crystal.
-    // Using the .attr("data-crystalvalue") allows us to grab the value out of the "data-crystalvalue" attribute.
-    // Since attributes on HTML elements are strings, we must convert it to an integer before adding to the counter
+
 
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
-    // We then add the crystalValue to the user's "counter" which is a global variable.
-    // Every click, from every crystal adds to the global counter.
+    
     currentScore += crystalValue;
 
-    // All of the same game win-lose logic applies. So the rest remains unchanged.
     $("#current-score-display").text(currentScore);
     $(".crystal-image").toggleClass("spinning-image");
 
     if (currentScore === goalNumber) {
-        alert("You win!");
-        winsCount++;
-        currentScore===0;
-        $("#current-score-display").text(currentScore);
-        $("#wins-count").text(winsCount);
-        startGame ();
-     
+        gameWinner();
+
     }
 
     else if (currentScore >= goalNumber) {
-        alert("You lose!!");
-        lossesCount++;
-        currentScore===0;
-        $("#current-score-display").text(currentScore);
-        $("losses-count").text(lossesCount);
-        startGame ();
+        gameLoser();
         
+
     }
 
 });

@@ -1,9 +1,71 @@
-.crystal-image {
-    height: 150px;
-    width: 150px;
+
+
+header {
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
-.spinning-image {
+h1 {
+    font-family: 'Princess Sofia', cursive;
+    text-align: center;
+    color: #c12264;
+    font-size: 72px;
+    font-weight: bold;
+  }
+
+  h2, h3, h4 {
+    text-align: center;
+  }
+
+  #instructions {
+    text-align: center;
+    color: #3c96e4;
+  }
+
+  #objectives {
+    color: #f9ab2a;
+  }
+
+  #counters {
+    color: #86264e;
+  }
+
+  body {
+    font-family: 'Port Lligat Sans', sans-serif;
+    background-image: url('../images/darkness/darkness.png');
+    background-repeat: repeat;
+  }
+  
+  .crystal-image {
+    height: 200px;
+    width: 200px;
     -webkit-transform: rotate(1080deg);
     -webkit-transition-duration: 3s;
-}
+  }
+
+  #crystal-container {
+    padding-top: 20px;
+    margin-left: 250px;
+    position: relative;
+    }
+
+    #goal {
+      float: left;
+    }
+
+    #score {
+      float: right;
+    }
+
+    footer {
+      text-align: center;
+    }
+
+    a {
+      color: lightgrey;
+      font-size: 8px;
+    }
+
+
+
+  
